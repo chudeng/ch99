@@ -26,7 +26,7 @@
   <div class="row">
     {% for photo in item.photo_set.all|slice:":5" %}
     <div class="ml-5">
-      <div class="thumbnal">
+      <div class="thumbnail">
         <a href="{{ photo.get_absolute_url }}">
           <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
         </a>
