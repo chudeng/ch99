@@ -36,4 +36,9 @@ urlpatterns = [
     # Examples: /blog/search/
     path('search/', views.SearchFormView.as_view(), name='search'),
 
+    # Examples: /blog/add/
+    path('add/', views.PostCreateView.as_view(), name='add',),
+
+    # Examples: /blog/change/
+    path('change/', views.PostCreateView.as_view(), name='add', ),
 ]
