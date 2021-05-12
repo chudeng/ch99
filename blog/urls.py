@@ -40,5 +40,11 @@ urlpatterns = [
     path('add/', views.PostCreateView.as_view(), name='add',),
 
     # Examples: /blog/change/
-    path('change/', views.PostCreateView.as_view(), name='add', ),
+    path('change/', views.PostChangeLV.as_view(), name='change',),
+
+    # Examples: /blog/99/update/
+    path('<int:pk>/update/', views.PostUpdateView.as_view(), name='update',),
+
+    # Examples: /blog/99/delete/
+    path('<int:pk>/delete/', views.PostDeleteView.as_view(), name='delete',),
 ]
